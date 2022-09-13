@@ -11,3 +11,11 @@ body {
 .button {
     transition: background 1s;
 }
+
+p {
+    transition: color 1s;
+}
+
+.temp {
+    transition: color 1s;
+}

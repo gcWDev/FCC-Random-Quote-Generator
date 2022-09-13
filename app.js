@@ -328,7 +328,7 @@ const quotes = [{
 }];
 const quoteBody = quote.innerText;
 const icons = document.querySelectorAll('i');
-
+const textField = document.querySelectorAll('p');
 
 
 function randomColor() {
@@ -336,8 +336,9 @@ function randomColor() {
     const temp = Math.floor(Math.random() * 16777215).toString(16);
     body.style.backgroundColor = "#" + temp;
     btn.style.backgroundColor = "#" + temp;
-    quote.style.color = "#" + temp;
-    person.style.color = "#" + temp;
+    textField.forEach(e => {
+        e.style.color = '#' + temp;
+    })
     icons.forEach(e => {
         e.style.color = '#' + temp;
     })
@@ -361,5 +362,3 @@ btn.addEventListener("click", randomColor);
 const twitterIcon = document.querySelector('a');
 
 twitterIcon.href = "https://twitter.com/intent/tweet?text=" + quote.innerText;
-
-console.log(twitterIcon);
